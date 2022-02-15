@@ -20,12 +20,12 @@ export default function Home() {
             .then(data => {
                 dispatchMovies({ type: MoviesActions.RefreshMovies, payload: data })
             })
-
     }, [])
 
     return (
         <>
             {console.log(moviesState)}
+            
             <Link to="/"> Home </Link>
             <Link to="/movie-details/1"> Details </Link>
             <Link to="/other"> NotFound </Link>
