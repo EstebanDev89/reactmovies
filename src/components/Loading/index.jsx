@@ -1,18 +1,12 @@
-import React from 'react'
-import './styles.css'
+import Backdrop from '../Backdrop'
+import Spinner from '../Spinner'
 
-export default function loading() {
+import React from 'react'
+
+export default function Loading() {
     return (
-        <div className="loading">
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-            <div className="loading__dot"></div>
-        </div>
+        <Backdrop>
+            <Spinner />
+        </Backdrop>
     )
 }
-
