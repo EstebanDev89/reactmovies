@@ -1,0 +1,16 @@
+/* Resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+a:visited {
+    color: unset;
+    text-decoration: none;
+}
