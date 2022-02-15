@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
-import Home from 'pages/Home';
-import MovieDetails from 'pages/MovieDetails';
-import NotFound from 'pages/NotFound';
+import Home from './pages/Home';
+import MovieDetails from './pages/MovieDetails';
+import NotFound from './pages/NotFound';
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
