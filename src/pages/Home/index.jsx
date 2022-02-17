@@ -24,10 +24,10 @@ export default function Home() {
 
     return (
         <>
-            <section>
+            <section className="movies">
                 {
                     moviesState?.movies?.map(
-                        movie => <MovieCard key={movie.id} movie={movie} size="w300" link={true}></MovieCard>
+                        movie => <MovieCard key={movie.id} movie={movie} size={300} link={true}></MovieCard>
                     )
                 }
             </section>

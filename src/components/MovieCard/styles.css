@@ -1,0 +1,29 @@
+.card {
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid rgb(133, 130, 130);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__footer {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card__star {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.card__star:after {
+    font-size: 20px;
+    content: "\2605";
+    position: absolute;
+    color: gold;
+}

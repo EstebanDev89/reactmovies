@@ -16,7 +16,7 @@ export default function MovieDetails() {
     return (
         response
             ? <>
-                <MovieCard movie={response} size="w300" title="none"></MovieCard>
+                <MovieCard movie={response} size={300} title="none"></MovieCard>
                 <div><span>Sinopsis: </span>{response.overview}</div>
                 <div><span>Genero:{response.genres?.map(g => g.name).join(", ")} </span></div>
                 {response.homepage
