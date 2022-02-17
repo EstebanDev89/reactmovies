@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import MovieCard from '../../components/MovieCard';
 import useLoadingFetch from '../../hooks/useLoadingFetch';
 
 export default function MovieDetails() {
@@ -13,9 +14,16 @@ export default function MovieDetails() {
     }, [])
 
     return (
-        <>
-            {console.log(response, isLoading, isError)}
-            < div > MovieDetails for id {id}</div >
-        </>
+        response
+            ? <>
+                <MovieCard movie={response} size="w300" title="none"></MovieCard>
+                <div><span>Sinopsis: </span>{response.overview}</div>
+                <div><span>Genero:{response.genres?.map(g => g.name).join(", ")} </span></div>
+                {response.homepage
+                    ? <div><span><a href={response.homepage}>¿Querés más Info?</a> </span></div>
+                    : ''
+                }
+            </>
+            : ''
     )
 }

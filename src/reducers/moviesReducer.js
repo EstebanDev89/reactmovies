@@ -9,7 +9,7 @@ export default function moviesReducer(state = moviesInitialState, action) {
 
     switch (type) {
 
-        case MoviesActions.RefreshMovies:
+        case MoviesActions.RefreshMovies:            
             let newState = {
                 movies: payload.results,
                 ...payload

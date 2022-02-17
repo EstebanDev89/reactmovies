@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { loadingContext } from "../contexts/LoadingContext";
 
 export default function useLoadingFetch() {
-    const [response, setResponse] = useState([])
+    const [response, setResponse] = useState()
     const [{ url, method }, setRequest] = useState({});
     const {isLoading, setIsLoading} = useContext(loadingContext);
     const [isError, setIsError] = useState(false);
