@@ -14,3 +14,14 @@ a:visited {
     color: unset;
     text-decoration: none;
 }
+
+
+/*Global*/
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+main {
+    padding-top: 58px;
+}

@@ -1,0 +1,132 @@
+.header {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.header__link {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #000000;
+    text-decoration: none;
+}
+
+.header__link:hover,
+.header__menu-btn:hover {
+    background-color: #313131;
+}
+
+.header__logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header__menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header__menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header__navicon {
+    background: rgb(255, 255, 255);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header__navicon:before,
+.header__navicon:after {
+    background: rgb(255, 255, 255);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header__navicon:before {
+    top: 5px;
+}
+
+.header__navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header__menu-btn {
+    display: none;
+}
+
+.header__menu-btn:checked~.header__menu {
+    max-height: 240px;
+}
+
+.header__menu-btn:checked~.header__navicon {
+    background: transparent;
+}
+
+.header__menu-btn:checked~.header__navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header__menu-btn:checked~.header__navicon:after {
+    transform: rotate(45deg);
+}
+
+.header__menu-btn:checked~.header__menu-icon:not(.steps) .header__navicon:before,
+.header__menu-btn:checked~.header__menu-icon:not(.steps) .header__navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header__li {
+        float: left;
+    }
+
+    .header__link {
+        padding: 20px 30px;
+    }
+
+    .header__menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header__menu-icon {
+        display: none;
+    }
+}

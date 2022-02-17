@@ -3,8 +3,8 @@ import Loading from './components/Loading'
 import Home from './pages/Home';
 import MovieDetails from './pages/MovieDetails';
 import NotFound from './pages/NotFound';
+import Header from './components/Header';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { loadingContext } from './contexts/LoadingContext'
 import './App.css';
@@ -16,14 +16,11 @@ function App() {
     <>
       <BrowserRouter>
         {isLoading ? <Loading /> : null}
-        <header>
-          <Link to="/"> Home </Link>
-          <Link to="/other"> NotFound </Link>
-        </header>
+        <Header />
         <main>
 
           <Routes>
-            {/* <Route path="/playground" element={<Loading />} /> */}
+            {/* <Route path="/playground" element={<Header />} /> */}
             <Route path="/" element={<Home />} />
             <Route path="/details/:id" element={<MovieDetails />} />
             <Route path="/not-found" element={<NotFound />} />
@@ -33,7 +30,7 @@ function App() {
 
         </main>
         <footer>
-          REDES SOCIALES
+
         </footer>
       </BrowserRouter>
 
